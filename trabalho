@@ -1,9 +1,112 @@
- Variaveis;
-Tipos_de_dados; 
-Operadores;
-Condicionais (if-elif-else); 
-Repeticoes_while; 
-Repeticoes_for; 
-Listas_e_dicionarios;
-Funcoes_e_POO;
-Banco_de_dados. 
+#Variaveis
+
+idade = 33
+nome  =  "Jaqueline"
+peso = 100
+
+print(idade) # 33
+print(nome) # Jaqueline
+print(peso) # 100
+
+
+#Tipos_de_dados;
+# Converte inteiro para string
+x = 10
+s = str(x)
+print(s)
+
+# Converte float para inteiro
+a = 2.5
+b = int(a)
+print(b)
+
+# Converte inteiro para float
+c = 2
+d = float(c)
+print(d)
+
+
+# Operadores;
+# Soma e subtração
+print(10 + 2 - 7)
+
+# Potência: 2 ^ 4
+print(2 ** 4)
+
+# Divisão de ponto flutuante
+print(20 / 6)
+
+# Divisão inteira, sem considerar o resto
+print(20 // 6)
+
+
+#Condicionais (if-elif-else); 
+idade = 18
+if idade < 12:
+    print('crianca')
+elif idade < 18:
+    print('adolescente')
+elif idade < 60:
+    print('adulto')
+else:
+    print('idoso')
+
+
+# Repeticoes_while; 
+contador = 0
+while (contador < 5):
+      print(contador)
+      contador = contador + 1
+else:
+      print("O loop while foi encerrado com sucesso!")
+
+
+# Repeticoes_for;
+nomes = ['Pedro', 'João', 'Leticia']
+for n in nomes:
+     print(n)
+else:
+     print("Todos os nomes foram listados com sucesso")
+
+
+# Listas_e_dicionarios
+alunos = ['Amanda', 'Ana', 'Bruno', 'João']
+notas = [10, 8.5, 7.8, 8.0] 
+
+print(type(alunos))
+print(type(notas))
+<class 'list'>
+<class 'list'>
+
+
+# Funcoes_e_POO;
+def hello(meu_nome):
+  print('Olá',meu_nome)
+>>> hello('Jaqueline')
+Olá Jaqueline
+>>> meu_nome
+'Jaqueline'
+
+def calcular_pagamento(qtd_horas, valor_hora):
+  horas = float(qtd_horas)
+  taxa = float(valor_hora)
+  if horas <= 40:
+    salario=horas*taxa
+  else:
+    h_excd = horas - 40
+    salario = 40*taxa+(h_excd*(1.5*taxa))
+  return salario
+
+# Banco_de_dados
+
+import mysql.connector
+
+cnx = mysql.connector.connect(user='root', password='********', host='127.0.0.1')
+
+cnx.close()
+import mysql.connector
+
+cnx = mysql.connector.connect(user='root', password='********', host='127.0.0.1')
+
+mycursor = cnx.cursor()
+mycursor.execute("CREATE DATABASE mydatabase")
